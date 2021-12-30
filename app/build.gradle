@@ -34,4 +34,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
+    //在github上自定义远程仓库【2】
+    implementation 'com.lwl:ads:1.0.1'
+
 }
