@@ -32,7 +32,7 @@ dependencies {
 apply plugin: 'maven'
 ext {
     //从github上clone下来的项目的本地地址
-    GITHUB_REPO_PATH = "/Users/liuweile/Desktop/liu/githubDemo"
+    GITHUB_REPO_PATH = "/Users/liuweile/Desktop/liu/githubDemo/repository"
     PUBLISH_GROUP_ID = 'com.lwl'
     PUBLISH_ARTIFACT_ID = "ads"
     PUBLISH_VERSION = '1.0.1'
