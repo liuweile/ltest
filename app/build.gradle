@@ -35,6 +35,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
 
     //在github上自定义远程仓库【2】
-    implementation 'com.lwl:ads:1.0.1'
+//    implementation 'com.lwl:ads:1.0.1'
+    implementation 'com.alx:ad:1.0.1'
 
 }

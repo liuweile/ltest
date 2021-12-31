@@ -21,7 +21,8 @@ allprojects {
         mavenCentral()
 
         //在github上自定义远程仓库【1】
-        maven { url "https://raw.githubusercontent.com/liuweile/ltest/master/repository" }
+//        maven { url "https://raw.githubusercontent.com/liuweile/ltest/master/repository" }
+        maven { url "https://raw.githubusercontent.com/liuweile/ltest/master/ads" }
     }
 }
 
