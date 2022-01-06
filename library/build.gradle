@@ -52,7 +52,8 @@ uploadArchives {
 
 //源代码一起打包
 task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
+//    classifier = 'sources'
+    archiveClassifier.set('sources') //替换上面过时的方法
     from android.sourceSets.main.java.sourceFiles
 }
 
