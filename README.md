@@ -6,9 +6,9 @@
 ### 打包项目 
 ./gradlew assembleRelease
 
-###引用方式
+### 引用方式
 implementation 'com.lwl:ads:1.0.1'  
 引用规范：PUBLISH_GROUP_ID：PUBLISH_ARTIFACT_ID：PUBLISH_VERSION  
 
-###自定义远程依赖仓库接入指导
+### 自定义远程依赖仓库接入指导
 https://blog.csdn.net/lindroid/article/details/80271502
