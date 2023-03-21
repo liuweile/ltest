@@ -1,0 +1,12 @@
+<resources>
+    <string name="alx_video_click_btn">Install</string>
+    <string name="alx_ad_log_ad">AD</string>
+    <string name="alx_ad_video_loading">Loading</string>
+    <string name="alx_video_skip">skip</string>
+    <string name="alx_home_dialog_title">Close Video?</string>
+    <string name="alx_home_dialog_content">You will lose the reward</string>
+    <string name="alx_home_dialog_ok">Continue</string>
+    <string name="alx_home_dialog_cancel">Close</string>
+    <string name="alx_btn_open">open now</string>
+    <string name="alx_btn_download">Download</string>
+</resources>

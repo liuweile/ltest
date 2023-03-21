@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--修改布局请注意：要兼容从右至左的布局-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:id="@+id/alx_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.alxad.widget.video.AlxVideoPlayerView
+            android:id="@+id/alx_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/alx_voice"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/alx_voice_on"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <!--    android:hint="00" 是为了修饰最小宽度使用,当android:text="1"时宽度很窄,用hint可以加大宽度    -->
+        <TextView
+            android:id="@+id/alx_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/alx_textview_border"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/alx_voice"
+            android:layout_toEndOf="@+id/alx_voice"
+            android:visibility="invisible"
+            android:textColorHint="@android:color/transparent"
+            android:hint="\t\t"
+            tools:visibility="visible"
+            tools:text="1"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/alx_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <!--Companion 伴随物料-->
+    <RelativeLayout
+        android:id="@+id/alx_companion"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/alx_video_background">
+
+        <com.alxad.widget.AlxShapeImageView
+            android:id="@+id/alx_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            app:alx_siv_shape="rectangle"
+            app:alx_siv_rect_radius="10dp"/>
+
+        <TextView
+            android:id="@+id/alx_action"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/alx_video_action_bg"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tools:text="立即下载" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@id/alx_action"
+            android:layout_toLeftOf="@id/alx_action"
+            android:layout_toEndOf="@id/alx_icon"
+            android:layout_toRightOf="@id/alx_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alx_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/alx_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.alxad.widget.AlxLogoView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/alx_ad_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="right|end"
+        android:src="@drawable/alx_close_icon"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</FrameLayout>
