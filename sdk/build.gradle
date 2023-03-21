@@ -99,9 +99,13 @@ afterEvaluate {
                 from components.release //必须加这个，不然aar不会上传
 //                artifact(androidSourcesJar) //将源码打包进aar[aar 不需要源码让开发者可见]
 
-                groupId = maven_group_id
-                artifactId = maven_artifact_id
-                version = maven_version
+                groupId = 'com.github.liuweile'
+                artifactId = 'algorix'
+                version = '1.0.1'
+
+//                groupId = maven_group_id
+//                artifactId = maven_artifact_id
+//                version = maven_version
             }
         }
 
