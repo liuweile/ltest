@@ -102,17 +102,17 @@ afterEvaluate {
             }
         }
 
-        repositories {
-            maven {
-                allowInsecureProtocol true //是否支持不安全的连接
-                name = 'alx' //可选
-                url = maven_path
-//                credentials {
-//                    username = maven_username
-//                    password = maven_password
-//                }
-            }
-        }
+//        repositories {
+//            maven {
+//                allowInsecureProtocol true //是否支持不安全的连接
+//                name = 'alx' //可选
+//                url = maven_path
+////                credentials {
+////                    username = maven_username
+////                    password = maven_password
+////                }
+//            }
+//        }
 
     }
 }
