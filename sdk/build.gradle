@@ -2,6 +2,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.kezong.fat-aar'
 apply plugin: 'maven-publish'
 
+group = 'com.github.liuweile'
+version='1.0.1'
+
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
@@ -126,3 +129,6 @@ afterEvaluate {
 //    from android.sourceSets.main.java.sourceFiles
 //}
 //--------------打包发布配置【maven-publish】end---------------
+
+
+
