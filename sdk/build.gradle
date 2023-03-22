@@ -1,9 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.kezong.fat-aar'
 apply plugin: 'maven-publish'
+apply plugin: 'org.jetbrains.dokka'
 
-group = 'com.github.liuweile'
-version='2.0'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -90,37 +89,34 @@ dependencies {
 //--------------打包发布配置【maven-publish】start---------------
 //打包命令： ./gradlew publish
 //apply plugin: 'maven-publish'
-afterEvaluate {
-    publishing{
-        publications{
-            release(MavenPublication){
-                from components.release //必须加这个，不然aar不会上传
-//                artifact(androidSourcesJar) //将源码打包进aar[aar 不需要源码让开发者可见]
-
-                groupId = 'com.github.liuweile'
-                artifactId = 'maven'
-                version = '2.0'
-
+//afterEvaluate {
+//    publishing{
+//        publications{
+//            release(MavenPublication){
+//                from components.release //必须加这个，不然aar不会上传
+////                artifact(androidSourcesJar) //将源码打包进aar[aar 不需要源码让开发者可见]
+//
 //                groupId = maven_group_id
 //                artifactId = maven_artifact_id
 //                version = maven_version
-            }
-        }
-
+//            }
+//        }
+//
 //        repositories {
 //            maven {
 //                allowInsecureProtocol true //是否支持不安全的连接
-//                name = 'alx' //可选
+////                name = 'mavencentral' //可选
 //                url = maven_path
-////                credentials {
-////                    username = maven_username
-////                    password = maven_password
-////                }
+//                credentials {
+//                    username = maven_username
+//                    password = maven_password
+//                }
 //            }
 //        }
-
-    }
-}
+//
+//    }
+//}
+apply from: '../publish.gradle'
 
 ////此sdk的源码不对外，所以不要打包出去
 ////源代码一起打包
