@@ -36,6 +36,5 @@ dependencies {
 //    implementation 'com.github.algorix:algorix:1.0.1'
 //    implementation 'com.alx:ad:1.0.1'
 
-    implementation project(':sdk')
 
 }
