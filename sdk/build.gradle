@@ -3,7 +3,6 @@ apply plugin: 'com.kezong.fat-aar'
 apply plugin: 'maven-publish'
 apply plugin: 'org.jetbrains.dokka'
 
-
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
@@ -40,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.4.1'
 
 //    implementation files('libs/alx-omsdk-android-1.3.32-release.aar')
@@ -104,19 +103,30 @@ dependencies {
 //
 //        repositories {
 //            maven {
-//                allowInsecureProtocol true //是否支持不安全的连接
-////                name = 'mavencentral' //可选
+////                allowInsecureProtocol true //是否支持不安全的连接
+//                name = 'mavencentral' //可选
 //                url = maven_path
-//                credentials {
-//                    username = maven_username
-//                    password = maven_password
-//                }
+////                credentials {
+////                    username = maven_username
+////                    password = maven_password
+////                }
 //            }
 //        }
 //
 //    }
 //}
 apply from: '../publish.gradle'
+
+//signing{
+//    publishing.publications.all { publication->
+//        sign publication
+//    }
+//}
+
+
+//signing {
+//    sign publishing.publications
+//}
 
 ////此sdk的源码不对外，所以不要打包出去
 ////源代码一起打包

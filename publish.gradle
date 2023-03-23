@@ -4,9 +4,8 @@ apply plugin: 'signing'
 task androidSourcesJar(type: Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.source
-
-    exclude "**/R.class"
-    exclude "**/BuildConfig.class"
+//    exclude "**/R.class"
+//    exclude "**/BuildConfig.class"
 }
 
 ext["signing.keyId"] = ''
@@ -92,7 +91,11 @@ publishing {
             // any other name that's descriptive for you
             name = "mavencentral"
 
+//            https://s01.oss.sonatype.org/content/groups/public/
+
             def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+//            def releasesRepoUrl = "https://s01.oss.sonatype.org/content/groups/public/"
+
             def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
             // You only need this if you want to publish snapshots, otherwise just set the URL
             // to the release repo directly
@@ -100,8 +103,8 @@ publishing {
 
             // The username and password we've fetched earlier
             credentials {
-                username '1209373349@qq.com'
-                password 'Liuwl@1234567'
+                username maven_username
+                password maven_password
             }
         }
     }
